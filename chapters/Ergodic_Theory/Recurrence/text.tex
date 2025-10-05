@@ -189,3 +189,37 @@ By ``function on X'' I mean a map \(X \to \bbC\).
     \begin{proof}
         \Yang{To be completed}
     \end{proof}
+
+    \begin{theorem}[Birkhoff Ergodic Theorem]\label{thm:Birkhoff_Ergodic_Theorem}
+        Let \(T:X\to X\) be a measure-preserving transformation on a measure space \((X, \mathcal{B}, \mu)\). 
+        Let \(f\in L^1(X, \mu)\). 
+        Then 
+        \[ \frac{1}{n} \sum_{i=0}^{n-1} f(T^i x) \]
+        converges for almost every \(x\in X\).
+        The limit function \(\tilde{f}\) is integrable and \(T\)-invariant, i.e., \(\tilde{f}(Tx) = \tilde{f}(x)\) for almost every \(x\in X\).
+        If \(\mu(X) < \infty\), then
+        \[ \int_X f \upd\mu = \int_X \tilde{f} \upd\mu. \]
+    \end{theorem}
+    \begin{proof}
+        We may assume that \(f\) is real-valued, since we can apply the theorem to the real and imaginary parts of \(f\) separately.
+
+        \Yang{To be continued...}
+    \end{proof}
+
+    \begin{theorem}[Maximal Ergodic Theorem]\label{thm:Maximal_Ergodic_Theorem}
+        Let \(U: L_\bbR^1 \to L_\bbR^1\) be a linear operator such that
+        \begin{enumerate}
+            \item \(\|Uf\|_1 \leq \|f\|_1\) for all \(f\in L^1\);
+            \item \(Uf \geq_{a.e.} 0\) if \(f\geq_{a.e.} 0\).
+        \end{enumerate}
+        Let \(N>0\) and \(f \in L^1_\bbR(X, \mu)\). 
+        Define \(f_0 = 0\) and \(f_n = Uf_{n-1} + f\) for \(n\geq 1\).
+        Let \(F_N = \max_{0\leq n \leq N} f_n\) and \(E = \{x\in X: F_N(x) > 0\}\).
+        Then 
+        \[
+            \int_E f \upd\mu \geq 0.
+        \]
+    \end{theorem}
+    \begin{proof}
+        \Yang{To be continued...}
+    \end{proof}
